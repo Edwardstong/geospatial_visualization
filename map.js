@@ -1,7 +1,8 @@
-// Import D3 as an ES module
-import * as d3 from 'https://cdn.jsdelivr.net/npm/[email protected]/+esm';
+// Import Mapbox as an ESM module
+import mapboxgl from 'https://cdn.jsdelivr.net/npm/mapbox-gl@2.15.0/+esm';
 
-// --- Time & traffic helpers (Steps 5 & 4) ---
+// Import D3 as an ES module
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
 
 // Global time filter value; -1 means "any time"
 let timeFilter = -1;
@@ -12,7 +13,7 @@ let arrivalsByMinute = Array.from({ length: 1440 }, () => []);
 
 // Convert minutes since midnight to a formatted time string (Step 5.2)
 function formatTime(minutes) {
-  const date = new Date(0, 0, 0, 0, minutes); // Set hours & minutes
+  const date = new Date(0, 0, 0, 0, minutes);
   return date.toLocaleString('en-US', { timeStyle: 'short' });
 }
 
