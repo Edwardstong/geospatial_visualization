@@ -5,7 +5,7 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 // ----------------- CONFIG -----------------
 
 // TODO: paste YOUR Mapbox public token here
-mapboxgl.accessToken = "pk.YOUR_REAL_TOKEN_HERE";
+mapboxgl.accessToken = "pk.eyJ1IjoiZWR0b25nIiwiYSI6ImNtaTEzcndtNzE1cmgyam9tcTRpeXl5OGYifQ.QsKGAtUl_sGspD76o5AaEw";
 
 const INPUT_BLUEBIKES_STATIONS_URL =
   "https://dsc106.com/labs/lab07/data/bluebikes-stations.json";
