@@ -52,7 +52,7 @@ const radiusScale = d3.scaleSqrt().range([0, 25]); // domain set after we know t
 // --- Mapbox setup (Step 1.3) ---
 
 // Set your Mapbox access token here
-mapboxgl.accessToken = 'pk.pk.eyJ1IjoiZWR0b25nIiwiYSI6ImNtaTEzcndtNzE1cmgyam9tcTRpeXl5OGYifQ.QsKGAtUl_sGspD76o5AaEw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZWR0b25nIiwiYSI6ImNtaTFhcW1iaDB0cTMycnB6ZDdtMml2ZGcifQ.LnU9J42fb-ZURVb7JTfEpw';
 
 // Initialize the map
 const map = new mapboxgl.Map({
