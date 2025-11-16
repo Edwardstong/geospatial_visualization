@@ -15,12 +15,16 @@
 
     <!-- Mapbox GL JS CSS -->
     <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
-      rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+    rel="stylesheet"
     />
 
-    <!-- Map logic (ES module) -->
-    <script src="map.js" type="module"></script>
+    <!-- Mapbox GL JS (global mapboxgl object) -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+    <!-- Our map logic (ES module, for D3 imports) -->
+    <script type="module" src="map.js"></script>
+
   </head>
   <body>
     <header>

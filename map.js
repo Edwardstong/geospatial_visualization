@@ -1,7 +1,4 @@
-// Import Mapbox as an ESM module (Step 1.1)
-import mapboxgl from 'https://cdn.jsdelivr.net/npm/[email protected]/+esm';
-
-// Import D3 as an ESM module (Step 3, "Import D3 as an ES Module")
+// Import D3 as an ES module
 import * as d3 from 'https://cdn.jsdelivr.net/npm/[email protected]/+esm';
 
 // --- Time & traffic helpers (Steps 5 & 4) ---
