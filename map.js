@@ -126,7 +126,7 @@ map.on('load', async () => {
   // 2) Cambridge bike lanes (Step 2.3, similar to above)
   map.addSource('cambridge_route', {
     type: 'geojson',
-    data: 'https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/master/Transportation/Bike/bike_facilities/geojson/bike_facilities.geojson',
+    data: 'https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Recreation/Bike_Facilities/RECREATION_BikeFacilities.geojson',
   });
 
   map.addLayer({
