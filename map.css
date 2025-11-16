@@ -1,0 +1,93 @@
+/* From Step 1.2: make the map fill the viewport area */
+html,
+body {
+  margin: 0;
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#map {
+  width: 100%; /* Adjust width to your desired size */
+  height: 100%; /* Adjust height to your desired size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* For SVG overlay */
+}
+
+/* SVG overlay on top of Mapbox canvas (Step 3.2) */
+#map svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Let Mapbox still handle panning/zooming */
+}
+
+/* Station circles (Step 4.3 & 4.4) */
+#map svg circle {
+  fill-opacity: 0.6;
+  stroke: white;
+  stroke-width: 1;
+  pointer-events: auto; /* Needed so browser tooltips work */
+}
+
+/* Header + slider layout (Step 5.1 hints) */
+header {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+.time-filter {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.time-filter time,
+.time-filter em {
+  display: block; /* So updating <time> doesn't move the slider */
+}
+
+.time-filter em {
+  font-style: italic;
+  color: #666;
+}
+
+/* Shared color variables for circles & legend (Step 6.1 & 6.2) */
+#map svg circle,
+.legend > div {
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
+}
+
+/* Circles use the mixed color as fill */
+#map svg circle {
+  fill: var(--color);
+}
+
+/* Legend layout (Step 6.2) */
+.legend {
+  display: flex;
+  gap: 1px;
+  margin-block: 1em;
+}
+
+.legend > div {
+  flex: 1;
+  padding: 0.5em 1em;
+  text-align: center;
+  background: var(--color);
+  color: #000; /* Adjust if your colors are darker */
+}
